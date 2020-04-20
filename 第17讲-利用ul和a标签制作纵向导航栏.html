@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            color: black;
+            font-style: 14px;
+            font-family: '宋体';
+            font-weight: bold;
+            list-style-type: none;
+            list-style-image: url(img/green_dot.gif);
+            list-style-position: inside;
+            background-image: url(img/arrow_r.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+            border-right: 1px dashed #99ff00;
+            border-bottom: 1px dashed #99ff00;
+        }
+
+        li:hover {
+            font-size: 16px;
+            list-style-image: url(img/star.jpg);
+            background-image: url(img/arrow.gif);
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        .myli {
+            list-style-type: none;
+            background-image: url(img/left_navbg.jpg);
+            list-style-image: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="myli"><span style="padding-left: 10px;">按地区</span></li>
+            <li>日本</li>
+            <li>中国</li>
+            <li>美国</li>
+            <li>英国</li>
+        </ul>
+    </div>
+</body>
+
+</html>

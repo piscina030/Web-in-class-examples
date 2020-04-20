@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5表单</title>
+    <script>
+        function chknumber() {
+            var obj = document.myfrm.age;
+            var vv = obj.value;
+            if (isNaN(vv)) { // 如果这个值返回为真，则输入的不是数字
+                alert("你输入的不是数字！");
+                obj.value = "";
+                obj.focus();
+            }
+        }
+        function setbg() {
+            var colorObj = document.myfrm.mybg;
+            var vv = colorObj.value;
+            // alret(vv);
+            document.body.style.backgroundColor = vv;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- novalidate="novalidate" 表示对表单元素不需要验证就可以提交 -->
+    <form action="http://www.baidu.com" method="" name="myfrm" novalidate="novalidate">
+        <table>
+            <tr>
+                <td>年龄:</td>
+                <td>
+                    <!-- type="number" 规定只能输入数字 但是可以输入e step代表步长 -->
+                    <input type="number" min="18" max="25" step="1" name="myage" value="21">
+                </td>
+            </tr>
+            <tr>
+                <td>年龄:</td>
+                <td>
+                    <!-- onblur 表示标点切换的时候切换函数 -->
+                    <!-- autofocus="true" 自动获取焦点 -->
+                    <!-- required="required" 表示不能为空 -->
+                    <input type="text" name="age" id="mage" placeholder="请输入数字" onblur="chknumber()" autofocus="true"
+                        required="required">
+                </td>
+            </tr>
+            <tr>
+                <td>邮箱:</td>
+                <td>
+                    <input type="email" name="myemail" placeholder="请输入邮箱地址">
+                </td>
+            </tr>
+            <tr>
+                <td>手机号：</td>
+                <td>
+                    <!-- 目前仅支持移动端 -->
+                    <input type="tel" name="mytel" placeholder="请输入电话">
+                </td>
+            </tr>
+            <tr>
+                <td>网址：</td>
+                <td>
+                    <input type="url" nam="myurl" placeholder="请输入个人网址" autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td>关键字：</td>
+                <td>
+                    <input type="search" name="keyword" placeholder="请输入关键字">
+                </td>
+            </tr>
+            <tr>
+                <td>背景：</td>
+                <td>
+                    <input type="color" name="mybg" value="#ff0000" onchange="setbg()">
+                </td>
+            </tr>
+            <tr>
+                <td>出生年月：</td>
+                <td>
+                    <!-- form="myfrm" 表示指定表单 -->
+                    <input type="date" name="mybirthday" form="myfrm">
+                </td>
+            </tr>
+            <tr>
+                <td>时间：</td>
+                <td>
+                    <input type="time" name="mytime">
+                </td>
+            </tr>
+            <tr>
+                <td>月份：</td>
+                <td>
+                    <input type="month" name="mymonth">
+                </td>
+            </tr>
+            <tr>
+                <td>周数：</td>
+                <td>
+                    <input type="week" name="myweek">
+                </td>
+            </tr>
+            <tr>
+                <td>年月日时间</td>
+                <td>
+                    <input type="datetime" name="mytt">
+                </td>
+            </tr>
+            <tr>
+                <td>城市：</td>
+                <td>
+                    <input type="text" name="city" list="dd">
+                    <datalist id="dd">
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>广州</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>显示隐藏：</td>
+                <td>
+                    <!-- 要显示或隐藏的文本 用 details 标签 -->
+                    <details open="open">hello world!</details>
+                </td>
+            </tr>
+            <tr>
+                <td>进度：</td>
+                <td>
+                    <progress name="mypro" max="100" min="0"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>投票：</td>
+                <td>
+                    <meter min="0" max="100" value="30"></meter>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="提交">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

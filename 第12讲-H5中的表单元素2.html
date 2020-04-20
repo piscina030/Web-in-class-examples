@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5form</title>
+    <script>
+        function setbg() {
+            var mydiv = document.getElementById("mydiv");
+            var rr = document.getElementById("rr").value;
+            var gg = document.getElementById("gg").value;
+            var bb = document.getElementById("bb").value;
+            mydiv.style.backgroundColor = "rgb(" + rr + "," + gg + "," + bb + ")";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="" name="myfrm">
+        <!-- <table>
+            <tr>
+                <td>范围选择</td>
+                <td>
+                    <input type="range" min="0" max="255" name="myrange" value="100" step="5">
+                </td>
+            </tr>
+        </table> -->
+        <div style="height: 60px;background-color: #ccc; text-align: center; line-height: 60px;" id="mydiv">hello,
+            world!</div>
+        <fieldset>
+            <legend>range表单元素</legend>
+            红色：<input type="range" id="rr" min="0" max="255" value="0" onchange="setbg()"><br />
+            绿色：<input type="range" id="gg" min="0" max="255" value="0" onchange="setbg()"><br />
+            蓝色：<input type="range" id="bb" min="0" max="255" value="0" onchange="setbg()">
+        </fieldset>
+    </form>
+</body>
+
+</html>

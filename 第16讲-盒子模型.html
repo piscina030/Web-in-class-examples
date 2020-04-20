@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        p {
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            font-style: 16px;
+            font-family: 'Microsoft YaHei';
+            color: white;
+            background-color: red;
+        }
+
+        div {
+            background-color: blue;
+            /* 控制内容部分和内边距*/
+            padding: 30px;
+            border-top: 20px green solid;
+            border-bottom: 20px green solid;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>hello,world!</p>
+    </div>
+    <div>
+        <img src="img/shop.jpg" width="300px" height="300px" style="display: block;">
+    </div>
+</body>
+
+</html>

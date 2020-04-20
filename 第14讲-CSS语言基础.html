@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS语言基础</title>
+    <link rel="stylesheet" href="css/mycss.css" type="text/css">
+    <style>
+        * {
+            /* margin: 0px;
+            padding: 0px; */
+            color: red;
+        }
+
+        h1,
+        h2 {
+            background-color: #ccc;
+            color: blue;
+        }
+
+        div {
+            background-color: red;
+            color: blue;
+            width: 400px;
+            height: 300px;
+            border: solid 3px blue;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        #mypp {
+            margin: 0px;
+            padding: 0px;
+            width: 400px;
+            height: 300px;
+            background-color: goldenrod;
+            text-align: center;
+            line-height: 300px;
+            border: dotted 3px red;
+        }
+
+        .myp2 {
+            width: 400px;
+            height: 300px;
+            background-color: red;
+            border: 3px solid blue;
+        }
+
+        input[name=username] {
+            border: 3px dotted red;
+        }
+
+        input[name=pwd] {
+            border: none;
+        }
+
+        /* @import url(css/mycss.css)只能引入样式文件，加载地更慢，支持的浏览器可能比link更少 */
+    </style>
+</head>
+
+<body>
+    <input type="text" name="username"><br>
+    <input type="password" name="pwd">
+    <h1>hello</h1>
+    <h2>world</h2>
+    <div>
+        <span>hello,world!</span>
+        <p>
+            <span>welcom</span>
+        </p>
+    </div>
+    <div>
+        hello world!
+    </div>
+    <div style="background-color: blue; color: red; border: dotted 3px red;">
+        welcome!
+    </div>
+    <div class="mydiv">
+        how are you!
+    </div>
+    <p id="mypp">hello, world!</p>
+    <p class="myp2">how are you!</p>
+</body>
+
+</html>

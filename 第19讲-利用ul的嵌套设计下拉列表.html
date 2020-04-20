@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用无序列表嵌套设计下拉菜单</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style-type: none;
+            width: 160px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px dashed black;
+            text-align: center;
+        }
+
+        a {
+            font-style: 19px;
+            font-family: 'Microsoft Yahei';
+            color: purple;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        div ul li {
+            float: left;
+            background-color: coral;
+        }
+
+        div ul li ul {
+            display: none;
+        }
+
+        div ul li:hover ul {
+            display: block;
+        }
+
+        div ul li:hover {
+            background-color: lightgray;
+        }
+
+        div ul li a:hover {
+            color: white;
+        }
+
+        div ul li ul li {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="#">网站首页</a>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">下载排行</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">网站首页</a>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">下载排行</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">网站首页</a>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">下载排行</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">网站首页</a>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">下载排行</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">网站首页</a>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">下载排行</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">网站首页</a>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">下载排行</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
