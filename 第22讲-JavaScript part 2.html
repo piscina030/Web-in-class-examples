@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript part 2</title>
+</head>
+
+<body>
+    <p>
+        <input type="text" class="username" value="hello">
+        <input type="text" class="username" value="world"><!-- 这个是获取不到的 -->
+    </p>
+</body>
+<script type="text/javascript">
+    // var obj = document.getElementsByName("username");
+    var obj = document.getElementsByClassName("username");
+    for (var i = 0; i < obj.length; i++)
+        document.write(obj[i].value + "</ br>");
+        //可以获取的元素是多个的
+</script>
+
+</html>

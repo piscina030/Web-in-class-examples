@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript part 1</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        input[name=btn]:hover {
+            border-radius: 4px;
+        }
+    </style>
+    <!-- 内部引入 start -->
+    <!-- <script>可以放到head标签里面，也可以放到body标签后面 -->
+    <!-- script标签可以有多个 -->
+    <!-- <script type="text/javascript">
+        // 注意：并不是所有<script>里面的都会被执行，函数只有在被调用的时候才会执行
+        //alert("hello world!");
+        // 单行注释
+        /* 多行注释 */
+        var obj = document.getElementById("username");
+        alert(obj.value);
+        function show() {
+            alert("nice to meet you!");
+            // 这里的函数没有返回值
+        }
+    </script> -->
+    <!-- 内部引入 end -->
+    <!-- 文件引入 start -->
+    <script type="text/javascript" src="js/21.js">
+
+    </script>
+    <!-- 文件引入 end -->
+</head>
+
+<body>
+    <!-- 行内引入 start -->
+    <p>
+        <input type="button" value="确定" name="btn" onclick="alert('Hello world!');">
+    </p>
+    <p>
+        <a href="javascript:alert('hello world!')">点击我</a>
+    </p>
+    <p>
+        <a href="javascript:show()">点击我</a>
+    </p>
+    <!-- 行内引入 end -->
+    <p>
+        <input type="text" id="username" value="hello">
+        <input type="text" id="username" value="world"><!-- 这个是获取不到的 -->
+    </p>
+</body>
+<script type="text/javascript">
+    // 注意：并不是所有<script>里面的都会被执行，函数只有在被调用的时候才会执行
+    //alert("hello world!");
+    // 单行注释
+    /* 多行注释 */
+    var obj = document.getElementById("username");
+    alert(obj.value);
+    function show() {
+        alert("nice to meet you!");
+        // 这里的函数没有返回值
+    }
+</script>
+
+</html>

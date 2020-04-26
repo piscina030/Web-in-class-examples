@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标经过的图像</title>
+    <script type="text/javascript">
+        var i = 1;//全局变量，i的值会保留下来
+        var t;
+        function chgimg() {
+            var obj = document.getElementById("myimg");
+            obj.src = "img/dl1d.jpg"
+        }
+        function resetimg() {
+            var obj = document.getElementById("myimg");
+            obj.src = "img/dl1.jpg"
+        }
+        function lunbo() {
+            var obj = document.getElementById("lb")
+            i++;
+            if (i > 5) {
+                i = 1;
+                obj.src = "img/love1.jpg";
+            }
+            else {
+                obj.src = "img/love" + i + ".jpg";
+            }
+        }
+        function start() {
+            t = setInterval("lunbo()", 1000);
+        }
+        function stop() {
+            clearInterval(t);
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <p>
+            鼠标经过的图像：
+        </p>
+        <p>
+            <img src="img/dl1.jpg" onmouseover="chgimg()" id="myimg" onmouseleave="resetimg()">
+        </p>
+        <p>
+            图片轮播：
+        </p>
+        <p>
+            <img src="img/love1.jpg" id="lb" width="400px" height="300px">
+        </p>
+        <p>
+            <input type="button" value="开始" onclick="start()">
+            <input type="button" value="结束" onclick="stop()">
+        </p>
+    </center>
+</body>
+
+</html>
